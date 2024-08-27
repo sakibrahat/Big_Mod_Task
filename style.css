@@ -30,6 +30,7 @@ body {
     display: flex;
     justify-content: center;
     flex: 1;
+    margin: 2px;
 }
 
 .navbar .nav-links a {
@@ -39,8 +40,10 @@ body {
     font-size: 18px;
 }
 .navbar .nav-links a:hover{
-    background-color: #5A4EAE;
-    color: whitesmoke;
+   font-size: 20px;
+   color: #452ce9;
+   transition: 1s;
+    
 }
 
 .navbar .button-section {
@@ -61,6 +64,7 @@ body {
 
 .navbar .button-section button:hover {
     background-color: #5A4EAE;
+    transition: 1s;
 }
 
 /*container*/
@@ -77,14 +81,58 @@ body {
     justify-content: center;
 }
 
-.j {
+/* Base styling for the section */
+
+
+/* Styling for H1 to make it take up the most space */
+.service-text {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 30px;
-    color: whitesmoke;
+    font-size: 20px;
+    padding: 40px;
+    text-align: center;
+    flex-direction: column; /* Stack elements vertically */
 }
+
+/* Styling for H1 to make it take up the most space */
+.service-text h1 {
+    width: 80%; /* Takes up most of the space */
+    text-align: center;
+    margin: 0 auto 10px; /* Center align, with less bottom margin */
+    font-size: 2em; /* You can adjust the size if needed */
+}
+
+/* Styling for the paragraph to take less space than the H1 */
+.service-text p {
+    width: 40%; /* Less width than h1 */
+    text-align: center;
+    margin: 5px auto; /* Reduce top and bottom margins */
+    font-size: 15px;
+}
+
+/* Styling for the button to take even less space than the paragraph */
+.service-text .btn {
+    width: 10%; /* Least width */
+    display: inline;
+    margin: 10px auto; /* Slight margin for spacing */
+    padding: 10px 20px; /* Adjust padding for button size */
+    font-size: 20px; /* Keep the font size consistent */
+    background-color: #F76D4A; /* Example button color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional: Add some hover effects for the button */
+.service-text .btn:hover {
+    background-color: #e65c3b; /* Darker shade on hover */
+}
+
+
+
 
 .container {
     display: grid;
@@ -159,12 +207,14 @@ body {
     background-color: #5A4EAE;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Ensure the container covers the full screen */
+
+
+
+/* Individual card styling */
 .container1 {
     display: flex;
     justify-content: center;
@@ -182,36 +232,42 @@ body {
 .cardb {
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Adjust width to fit more cards */
+    width: 400px; /* Adjust width to fit more cards */
     height: auto; /* Auto height to adjust to content */
     text-align: center;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Image styling within the card */
-.cardb img {
+/* Text section within the card */
+.text-section {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Image section within the card */
+.image-section img {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 15px;
+    display: block; /* Ensure image takes full width */
 }
 
-/* Headings within cards */
-.cardb h2 {
-    text-align: center;
+/* Headings within text section */
+.text-section h2 {
     color: #800080;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-/* Paragraphs within cards */
-.cardb p {
+/* Paragraphs within text section */
+.text-section p {
     text-align: justify;
     font-size: 1em;
     margin-bottom: 10px;
 }
+
 
 /* Button styling */
 .header1 .btn {
